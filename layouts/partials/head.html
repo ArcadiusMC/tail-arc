@@ -17,10 +17,17 @@
         document.documentElement.classList.remove('dark')
     }
 </script>
-{{ $styles := resources.Get "/css/style.css" | postCSS }}
-{{ if $.Site.IsServer }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
-{{ else }}
-{{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
-{{ end }}
+
+{{template "link-style" (dict "ref" "/css/style.css" "Site" $.Site )}}
+{{template "link-style" (dict "ref" "/css/custom.css" "Site" $.Site )}}
+
+{{define "link-style"}}
+  {{$styles := resources.Get $.ref | postCSS }}
+
+  {{ if $.Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  {{ else }}
+    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" />
+  {{ end }}
+{{end}}

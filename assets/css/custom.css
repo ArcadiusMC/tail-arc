@@ -1,0 +1,42 @@
+/* assets */
+@import url('https://fonts.cdnfonts.com/css/trajan-pro');
+
+.trajanpro {
+  font-family: 'Trajan Pro';
+}
+
+code:not([data-lang]) {
+  padding: 0.2em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  background-color: #afb8c133;
+  border-radius: 6px;
+  color: #1f2328;
+}
+
+:is(.dark code:not([data-lang])) {
+  color: #e6edf3;
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+:is(.dark pre code) {
+  padding: 0;
+  background-color: transparent;
+}
+
+.codefont {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+.quoted::before {
+  content: '"';
+}
+.quoted::after {
+  content: '"';
+}
