@@ -46,6 +46,7 @@ markup:
       xhtml: false
 
 params:
+  org_title: ArcadiusMC
   author: Nusser Studios
   authorimage: ../assets/images/global/author.webp
   og_image: /images/tailbliss-cover.png
@@ -98,16 +99,22 @@ params:
   social_media:
     github:
       enabled: true
-      url: 'https://github.com/nusserstudios'
-    facebook:
-      enabled: true
-      url: 'https://facebook.com/nusserstudios'
+      url: 'https://github.com/arcadiusmc'
     instagram:
       enabled: true
-      url: 'https://instagram.com/nusserstudios'
+      url: 'https://instagram.com/arcadiusmc'
     twitter:
       enabled: true
-      url: 'https://twitter.com/nusserstudios'
+      url: 'https://twitter.com/serverarcadius'
+    pinterest:
+      enabled: true
+      url: 'https://pinterest.com/ArcadiusMC'
+    youtube:
+      enabled: true
+      url: 'https://youtube.com/@ArcadiusMC'
+    discord:
+      enabled: true
+      url: 'https://discord.arcadiusmc.net/'
     
 
 menu:
