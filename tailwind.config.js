@@ -57,6 +57,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            maxWidth: 'none',
             hr: {
               'margin-bottom': '1em'
             },
