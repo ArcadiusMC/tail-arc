@@ -1,0 +1,6 @@
+{{with .GitInfo}}
+  <div class="text-gray-500 mt-5 text-lg inline ml-1">
+    <b>Last modified</b>: {{.CommitDate.Format "02.01.2006"}}
+    <b>commit</b>: {{.Subject}}
+  </div>
+{{end}}
