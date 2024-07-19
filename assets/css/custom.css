@@ -76,10 +76,13 @@ pre code {
 .wikisidebar {
   flex-direction: column;
   flex: auto !important;
-  min-width: 200px; 
-  max-width: 200px; 
   flex: 5;
   overflow-x: hidden;
+}
+
+.wiki-sidewidth {
+  min-width: 200px; 
+  max-width: 200px; 
 }
 
 @media (max-width: 767px) {
@@ -88,9 +91,12 @@ pre code {
     margin: unset;
     text-align: left;
     background-color: #0f172a;
-    max-width: 100%;
     padding-left: 1.5rem;
     overflow-x: hidden;
+  }
+
+  .wiki-sidewidth {
+    max-width: 100%;
   }
 
   .sidebar-shown {
@@ -101,3 +107,17 @@ pre code {
     display: none;
   }
 }
+
+#TableOfContents ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+#TableOfContents li {
+  margin-top: 0.5rem;
+}
+
+#TableOfContents li a {
+  color: #818cf8;
+}
+

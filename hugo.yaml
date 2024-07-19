@@ -96,6 +96,9 @@ menu:
       name: Contact
       url: /contact/
       weight: 50
+    - identifier: 'wiki'
+      name: 'Wiki'
+      url: '/wiki/'
   categories:
     - identifier: prose
       name: Prose
