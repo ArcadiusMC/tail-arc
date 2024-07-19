@@ -1,6 +1,18 @@
 /* assets */
 @import url('https://fonts.cdnfonts.com/css/trajan-pro');
 
+h1[id], h2[id], h3[id] {
+  scroll-margin-top: 80px;
+}
+
+.image-bg {
+  background-image: url("/images/bg/arcadia.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .trajanpro {
   font-family: 'Trajan Pro';
 }
