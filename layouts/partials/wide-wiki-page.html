@@ -11,8 +11,8 @@
       {{partial "side-navbar.html" . }}
     {{end}}
     
-    <div style="max-width: none;" class="widewiki-min-w max-lg:w-screen">
-      <h1 class="{{if $code_font}}codefont{{end}} text-5xl {{if (not $has_sidebar)}}pb-5{{end}} lg:ml-5 pb-3 sidebar-lmargin font-bold text-black dark:text-white max-lg:bg-slate-900 lg:text-left text-center">
+    <div class="widewiki-min-w max-lg:w-screen">
+      <h1 class="{{if $code_font}}codefont{{end}} text-5xl {{if (not $has_sidebar)}}pb-5{{end}} max-lg:mt-5 lg:ml-5 pb-3 sidebar-lmargin font-bold text-black dark:text-white lg:text-left text-center">
         {{.Title}}
       </h1>
 
@@ -20,7 +20,7 @@
         {{.Content}}
       </div>
 
-      <div>
+      <div class="lg:text-right lg:max-w-[1000px]">
         {{ partial "git-info.html" . }}
       </div>
     </div>
