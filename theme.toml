@@ -1,4 +1,4 @@
-name = "TailBliss"
+name = "arc-tail"
 license = "Apache-2.0"
 licenselink = "https://github.com/nusserstudios/tailbliss/blob/main/LICENSE"
 description = "TailBliss is an Hugo Starter with Tailwind CSS 3.2 and Alpine.js with light and dark modes. Submitted for Hacktoberfest 2022."
