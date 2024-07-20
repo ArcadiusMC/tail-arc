@@ -20,7 +20,7 @@
     </div>
     <nav :class="{'flex': open, 'hidden': !open}"
        class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-      {{ range site.Menus.main }}
+      {{ range site.Menus.main.ByWeight }}
       {{ if (eq "complexdropdown" .Pre) }}
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
         <button @click="open = !open"

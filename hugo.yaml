@@ -103,15 +103,19 @@ menu:
     - identifier: 'prose'
       url: '/prose/'
       name: 'Prose'
+      weight: 30
     - identifier: 'about'
       url: '/about/'
       name: 'About'
+      weight: 20
     - identifier: 'posts'
       url: '/posts/'
       name: 'Posts'
+      weight: 100
     - identifier: 'wiki'
       url: '/wiki/'
       name: 'Wiki'
+      weight: 10
   categories:
     - identifier: prose
       name: Prose
