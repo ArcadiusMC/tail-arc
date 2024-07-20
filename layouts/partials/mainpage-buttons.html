@@ -1,0 +1,7 @@
+<div class="text-white text-center mt-10">
+  {{range .Site.Menus.homepage}}
+    <a href="{{ .URL | absLangURL }}" class="mt-2 block mx-auto p-2 max-w-md hover:bg-primary-800 rounded-lg bg-primary-600">
+      {{.Name}}
+    </a>  
+  {{end}}
+</div>

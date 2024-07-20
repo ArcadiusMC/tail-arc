@@ -4426,12 +4426,12 @@ EmojiSymbols;
     max-width: 80rem;
   }
 
-  .lg\:max-w-none {
-    max-width: none;
-  }
-
   .lg\:max-w-\[1000px\] {
     max-width: 1000px;
+  }
+
+  .lg\:max-w-none {
+    max-width: none;
   }
 
   .lg\:flex-row {
@@ -4472,14 +4472,6 @@ EmojiSymbols;
 
   .lg\:pb-24 {
     padding-bottom: 6rem;
-  }
-
-  .lg\:pl-1 {
-    padding-left: 0.25rem;
-  }
-
-  .lg\:pl-10 {
-    padding-left: 2.5rem;
   }
 
   .lg\:text-left {

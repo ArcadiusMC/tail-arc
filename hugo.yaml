@@ -99,6 +99,19 @@ menu:
     - identifier: 'wiki'
       name: 'Wiki'
       url: '/wiki/'
+  homepage:
+    - identifier: 'prose'
+      url: '/prose/'
+      name: 'Prose'
+    - identifier: 'about'
+      url: '/about/'
+      name: 'About'
+    - identifier: 'posts'
+      url: '/posts/'
+      name: 'Posts'
+    - identifier: 'wiki'
+      url: '/wiki/'
+      name: 'Wiki'
   categories:
     - identifier: prose
       name: Prose
