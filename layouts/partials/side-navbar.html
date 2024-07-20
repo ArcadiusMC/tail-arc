@@ -1,6 +1,6 @@
 <div x-data="{ sidebarOpen: false }" class="wikisidebar wiki-sidewidth dark:prose-invert dark:text-white text-gray-900">
 
-  <div class="flex flex-row items-center justify-between p-4">
+  <div class="flex flex-row items-center justify-between max-lg:p-4">
     <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="sidebarOpen = !sidebarOpen" role="navigation" aria-expanded="false" aria-label="Main" aria-controls="menuItems">
         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
             <path x-show="!sidebarOpen" fill-rule="evenodd" d="M3  5a1 1 0 011-1h12a1 1 0 110  2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110  2H4a1 1 0 01-1-1z M3 15a1 1 0 011-1h12a1 1 0 110  2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -51,7 +51,7 @@
       <a title="{{.p.Description}}" href="{{.p.RelPermalink}}">
     {{end}}
 
-    <li {{if (gt $depth 0)}}style="padding-left: {{$depth_margin}}rem;"{{end}} class="{{if $is_current}}bg-slate-300 dark:bg-slate-600 cursor-pointer{{end}} {{if .title}}font-bold{{end}} p-1 hover:bg-slate-200  dark:hover:bg-slate-700">
+    <li {{if (gt $depth 0)}}style="padding-left: {{$depth_margin}}rem;"{{end}} class="{{if $is_current}}bg-slate-300 dark:bg-slate-600 cursor-pointer{{end}} {{if .title}}font-bold{{end}} p-1 hover:bg-slate-200 max-lg:py-3 dark:hover:bg-slate-700">
       {{.p.Title}}
     </li>
 
