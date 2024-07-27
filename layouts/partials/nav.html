@@ -25,7 +25,7 @@
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
         <button @click="open = !open"
             class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline">
-          <span class="trajanpro">{{ .Name }}</span>
+          <span>{{ .Name }}</span>
           <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
              class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
             <path fill-rule="evenodd"
@@ -75,7 +75,7 @@
                   
                 </div>
                 <div class="ml-3">
-                  <p class="font-semibold trajanpro">{{ .Name }}</p>
+                  <p class="font-semibold">{{ .Name }}</p>
                   <p class="text-sm">{{ .Post }}</p>
                 </div>
               </a>
@@ -88,7 +88,7 @@
       <div @click.away="open = false" class="relative" x-data="{ open: false }">
         <button @click="open = !open"
             class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline">
-          <span class="trajanpro">{{ .Name }}</span>
+          <span>{{ .Name }}</span>
           <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
              class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
             <path fill-rule="evenodd"
@@ -105,14 +105,14 @@
            class="absolute right-0 z-30 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
           <div class="px-2 py-2 text-primary-900 bg-white rounded-md shadow">
             {{ range (index site.Menus .Identifier) }}
-            <a class="trajanpro block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline"
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:shadow-outline"
                href="{{ .URL | absLangURL }}">{{- .Name -}}</a>
             {{ end }}
           </div>
         </div>
       </div>
       {{ else }}
-      <a class="trajanpro px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline"
+      <a class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-primary-600 focus:bg-primary-700 focus:outline-none focus:shadow-outline"
         href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
         {{ .Name }}
       </a>
