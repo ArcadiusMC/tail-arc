@@ -758,6 +758,7 @@ video {
   margin-bottom: 0.6em;
   line-height: 1.6;
   font-size: 1.5em;
+  font-weight: initial;
 }
 
 .prose :where(h3 strong):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
