@@ -18,8 +18,12 @@ function sidebarSearchMain() {
 
 function filterOutSidebar(sidebar, params) {
   const titleAttr = "page-title"
-  let splitParams = params.split(/\s+/)
   let children = sidebar.children
+
+  params = params.toLowerCase().replaceAll(" ", "")
+  let empty = isEmptyString(params)
+
+  console.log(`Is empty: '${params}' = ${empty}`)
 
   for (let i = 0; i < children.length; i++) {
     let item = children.item(i)
@@ -29,21 +33,16 @@ function filterOutSidebar(sidebar, params) {
     }
 
     let attr = item.getAttribute(titleAttr)
-    let lower = attr.toLowerCase()
+    let lower = attr.toLowerCase().replaceAll(" ", "")
     let matched = false
     
-    if (params == "") {
+    if (empty) {
       matched = true
     } else {
-      for (let pIdx = 0; pIdx < splitParams.length; pIdx++) {
-        let param = splitParams[pIdx]
-  
-        if (lower.indexOf(param) == -1) {
-          continue
-        }
-  
+      if (lower.indexOf(params) == -1) {
+        matched = false
+      } else {
         matched = true
-        break
       }
     }
 
@@ -57,4 +56,8 @@ function filterOutSidebar(sidebar, params) {
       clist.add(hideClass)
     }
   }
+}
+
+function isEmptyString(str) {
+  return str == null || str == "" || !(/\S+/.test(str))
 }
