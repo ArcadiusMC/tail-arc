@@ -16,6 +16,7 @@
       class="bg-slate-800 mt-1 mx-[1%] p-1 mb-3 w-[98%] border-2 border-slate-700 focus:border-slate-500 outline-none rounded-lg" 
       type="text" 
       placeholder="search..."
+      autocomplete="off"
     >
 
     {{$current_page := .}}
@@ -24,8 +25,9 @@
     {{template "sidebar-template" (dict "current_section" $nav_root "cpage" $current_page "depth" 0 "rtype" $current_page.Type)}}
   </ul>
 
-  {{ $searchScript := resources.Get "js/sidebar-search.js" }}
-  <script src="{{$searchScript.RelPermalink}}"></script>
+  {{with resources.Get "js/sidebar-search.js"}}
+    <script src="{{.RelPermalink}}"></script>
+  {{end}}
 </div>
 
 {{define "sidebar-template"}}
@@ -51,11 +53,11 @@
 {{define "sidebar-link"}}
   {{$is_current := (eq .cpage .p)}}
   {{$depth := (add .depth 0)}}
-  {{$depth_margin := (mul $depth 1)}}
+  {{$depth_margin := (math.Max 0 (mul (sub $depth 1) 0.5))}}
 
   {{if (eq .p.Type .rtype)}}
     <a page-title="{{.p.Title}}" title="{{.p.Description}}" href="{{.p.RelPermalink}}">
-      <li {{if (gt $depth 0)}}style="padding-left: {{$depth_margin}}rem;"{{end}} class="{{if $is_current}}bg-slate-300 dark:bg-slate-600 text-gray-300 cursor-pointer{{else}}text-gray-400{{end}} {{if .title}}font-bold{{end}} p-1 hover:bg-slate-200 max-lg:py-3 dark:hover:bg-slate-700">
+      <li {{if (gt $depth_margin 0)}}style="padding-left: {{$depth_margin}}rem;"{{end}} class="{{if $is_current}}bg-slate-300 dark:bg-slate-600 text-gray-300 cursor-pointer{{else}}text-gray-400{{end}} {{if .title}}font-bold{{end}} p-1 hover:bg-slate-200 max-lg:py-3 dark:hover:bg-slate-700">
         {{.p.Title}}
       </li>
     </a>
