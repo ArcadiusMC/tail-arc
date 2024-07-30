@@ -18,7 +18,7 @@
 <div class="w-[80%] border-l-4 {{$borderColor}} {{$bgColor}} bg-opacity-50 my-3 p-3 rounded-r-lg">
   <div class="ml-2">
     {{if strings.ContainsNonSpace $atitle}}
-      <h2 style="margin-top: 0; margin-bottom: 0.5em;">{{$atitle}}</h2>
+      <h3 style="margin-top: 0; margin-bottom: 0.5em;">{{$atitle}}</h3>
     {{end}}
 
     {{.Inner | markdownify}}
