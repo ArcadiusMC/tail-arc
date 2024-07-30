@@ -78,7 +78,8 @@ module.exports = {
               'margin-top': '1em'
             },
             'h3': {
-              'font-size': '1.5em'
+              'font-size': '1.5em',
+              'font-weight': 'initial'
             },
             'h4': {
               'font-weight': 'initial',
